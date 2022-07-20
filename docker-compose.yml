@@ -1,0 +1,38 @@
+version: "3"
+services:
+  # フロントエンド
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    volumes:
+      - ./frontend/app:/app
+      - node_modules_volume:/app/node_modules
+    ports:
+      - "8080:8080"
+    links:
+      - backend
+  # バックエンド
+  backend:
+    container_name: backend
+    build: ./backend
+    volumes:
+      - ./backend/app:/app
+    ports:
+      - "5000:5000"
+    command: flask run --host 0.0.0.0 --port 5000
+    links:
+      - database
+  # データベース
+  database:
+    image: postgres:9.3
+    volumes:
+      - ./database/pgdata:/var/lib/postgresql/data
+      - ./sql/postgres/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+
+volumes:
+  node_modules_volume:

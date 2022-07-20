@@ -1,14 +1,6 @@
-# ベースイメージ
-FROM node:13.10.1-alpine3.11
-
-WORKDIR /app
-
-# 依存関係のインストール
-COPY ./app/package*.json ./
-RUN npm install
-
-# プロジェクトフォルダをカレントディレクトリ(appフォルダ)にコピー
-COPY ./app .
-
-EXPOSE 8080
-CMD ["npm", "run", "serve"]
+FROM node:16.13.0-alpine3.12
+ENV NODE_VERSION 14.18.1
+WORKDIR /front
+COPY ./app /front
+EXPOSE 3000
+ENV CI=true

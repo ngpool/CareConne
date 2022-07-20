@@ -1,10 +1,10 @@
-FROM python:3.7
+# pythonのバージョンは任意
+FROM python:3.8
 
-RUN mkdir /app
-ADD requirements.txt /app
+WORKDIR /usr/src/app
+ENV FLASK_APP=app
 
-ENV PYTHONUNBUFFERED 1
-EXPOSE 5000
+COPY /app/requirements.txt ./
 
-WORKDIR /app
-RUN pip3 install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt

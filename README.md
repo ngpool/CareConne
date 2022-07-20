@@ -30,7 +30,7 @@ CRUD
 DB:Postgres　　
 サーバ:ロリポップ!　　
 チケット:git Redmine　　
-設計ツール:画面繊維図→Figma,  
+設計ツール:画面繊維図→Figma,画面仕様図→ルシッドチャート,ER図→スプレットシート
 その他　:Docker,git　　
 
 

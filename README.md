@@ -25,13 +25,13 @@ CRUD
 綺麗に作ろう。　　
 
 言語：  
-フロント:React＋Vue,Jquery　　
-バックエンド:Python(FLSK、django)　　
-DB:Postgres　　
-サーバ:ロリポップ!　　
-チケット:git Redmine　　
-設計ツール:画面繊維図→Figma,画面仕様図→ルシッドチャート,ER図→スプレットシート
-その他　:Docker,git　　
+フロント:React＋Vue,Jquery  
+バックエンド:Python(FLSK、django)  
+DB:Postgres  
+サーバ:ロリポップ!  
+チケット:git Redmine  
+設計ツール:画面繊維図→Figma,画面仕様図→ルシッドチャート,ER図→スプレットシート  
+その他　:Docker,git  
 
 
 

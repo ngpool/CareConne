@@ -30,6 +30,7 @@ CRUD
 DB:Postgres　　
 サーバ:ロリポップ!　　
 チケット:git Redmine　　
+設計ツール:画面繊維図→Figma,  
 その他　:Docker,git　　
 
 
